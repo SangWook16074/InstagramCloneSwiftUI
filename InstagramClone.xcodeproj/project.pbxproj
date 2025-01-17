@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B582F5A2D3A326700F6CE33 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B582F592D3A326700F6CE33 /* CircleImageView.swift */; };
+		5B582F5C2D3A35D500F6CE33 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B582F5B2D3A35D200F6CE33 /* ImageView.swift */; };
+		5B582F662D3AA22B00F6CE33 /* BottomNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B582F652D3AA21B00F6CE33 /* BottomNavBarView.swift */; };
+		5B582F682D3AA78A00F6CE33 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B582F672D3AA78400F6CE33 /* TabItem.swift */; };
 		5B5CCF902D37AF3C00BA75C6 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CCF8F2D37AF3900BA75C6 /* AppView.swift */; };
 		5B710CD52C8EEA5500236D32 /* InstagramCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B710CD42C8EEA5500236D32 /* InstagramCloneApp.swift */; };
 		5B710CD92C8EEA5700236D32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B710CD82C8EEA5700236D32 /* Assets.xcassets */; };
@@ -24,6 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B582F592D3A326700F6CE33 /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
+		5B582F5B2D3A35D200F6CE33 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		5B582F652D3AA21B00F6CE33 /* BottomNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNavBarView.swift; sourceTree = "<group>"; };
+		5B582F672D3AA78400F6CE33 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
 		5B5CCF8F2D37AF3900BA75C6 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		5B710CD12C8EEA5500236D32 /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B710CD42C8EEA5500236D32 /* InstagramCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramCloneApp.swift; sourceTree = "<group>"; };
@@ -54,6 +62,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B582F572D3A324900F6CE33 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5B582F582D3A325000F6CE33 /* View */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		5B582F582D3A325000F6CE33 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B582F5B2D3A35D200F6CE33 /* ImageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		5B5CCF8D2D37AEAE00BA75C6 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -65,7 +89,10 @@
 		5B5CCF8E2D37AF3300BA75C6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5B582F672D3AA78400F6CE33 /* TabItem.swift */,
+				5B582F652D3AA21B00F6CE33 /* BottomNavBarView.swift */,
 				5B5CCF8F2D37AF3900BA75C6 /* AppView.swift */,
+				5B582F592D3A326700F6CE33 /* CircleImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -91,6 +118,7 @@
 		5B710CD32C8EEA5500236D32 /* InstagramClone */ = {
 			isa = PBXGroup;
 			children = (
+				5B582F572D3A324900F6CE33 /* Common */,
 				5B710CD42C8EEA5500236D32 /* InstagramCloneApp.swift */,
 				5B5CCF8D2D37AEAE00BA75C6 /* App */,
 				5B710CD82C8EEA5700236D32 /* Assets.xcassets */,
@@ -212,7 +240,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B582F662D3AA22B00F6CE33 /* BottomNavBarView.swift in Sources */,
+				5B582F5C2D3A35D500F6CE33 /* ImageView.swift in Sources */,
+				5B582F682D3AA78A00F6CE33 /* TabItem.swift in Sources */,
 				5B710CD52C8EEA5500236D32 /* InstagramCloneApp.swift in Sources */,
+				5B582F5A2D3A326700F6CE33 /* CircleImageView.swift in Sources */,
 				5B5CCF902D37AF3C00BA75C6 /* AppView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
