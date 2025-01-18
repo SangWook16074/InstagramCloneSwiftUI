@@ -11,7 +11,7 @@ enum Tab {
 struct AppView: View {
     @State var selection : Tab = .feed
     
-    @ViewBuilder var body: some View {
+    var body: some View {
         VStack(spacing: 0) {
             switch selection {
                 case .feed:
@@ -34,6 +34,7 @@ struct AppView: View {
             Spacer()
             
             BottomNavBarView(selectedTab: $selection)
+
         }
     }
 }

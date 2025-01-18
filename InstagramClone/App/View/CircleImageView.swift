@@ -10,7 +10,7 @@ import SwiftUI
 struct CircleImageView: View {
     let imageUrl : String
     let type : CircleImageType
-    @ViewBuilder var body: some View {
+    var body: some View {
         switch type {
             case .bottomNavOn:
                 bottomNavImage

@@ -9,36 +9,36 @@ struct BottomNavBarView : View {
                 .onTapGesture {
                     selectedTab = .feed
                 }
-            .accessibilityLabel("FeedTab")
+                .accessibilityIdentifier((selectedTab == .feed) ? "feedOnTab" : "feedOffTab")
             
             TabItem(onImagePath: .bottomNavSearchOnIcon, offImagePath: .bottomNavSearchOffIcon, isActive: selectedTab == .search)
             .onTapGesture {
                 selectedTab = .search
             }
-            .accessibilityLabel("SearchTab")
+            .accessibilityIdentifier((selectedTab == .search) ? "searchOnTab" : "searchOffTab")
             
             TabItem(onImagePath: .bottomNavUploadIcon, offImagePath: .bottomNavUploadIcon, isActive: true)
             .onTapGesture {
                 selectedTab = .upload
             }
-            .accessibilityLabel("uploadTab")
+            .accessibilityIdentifier("uploadTab")
             
             
             TabItem(onImagePath: .bottomNavActiveOnIcon, offImagePath: .bottomNavActiveOffIcon, isActive: selectedTab == .active)
             .onTapGesture {
                 selectedTab = .active
             }
-            .accessibilityLabel("activeTab")
+            .accessibilityIdentifier((selectedTab == .active) ? "activeOnTab" : "activeOffTab")
             
             GeometryReader { geo in
-                CircleImageView(imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnnnObTCNg1QJoEd9Krwl3kSUnPYTZrxb5Ig&s", type: (selectedTab == .mypage) ? .bottomNavOn : .bottomNavOff)
+                let path = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnnnObTCNg1QJoEd9Krwl3kSUnPYTZrxb5Ig&s"
+                CircleImageView(imageUrl: path, type: (selectedTab == .mypage) ? .bottomNavOn : .bottomNavOff)
                     .onTapGesture {
                         selectedTab = .mypage
                     }
                     .frame(width: geo.size.width, height: geo.size.height)
-                    .accessibilityLabel("MyPageOnTap")
             }
-            .accessibilityLabel("mypageTab")
+            .accessibilityIdentifier((selectedTab == .mypage) ? "mypageOnTab" : "mypageOffTab")
         }
         .frame(height: 70)
     }
