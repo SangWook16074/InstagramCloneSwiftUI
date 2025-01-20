@@ -31,6 +31,15 @@ final class AppViewUITest: XCTestCase {
         XCTAssertTrue(firstView.exists, "초기 화면이 잘 나타나지 않습니다.!")
     }
     
+    func test_AppView는_AppBar가_존재한다() throws {
+        let logo = app.images["logo"]
+        XCTAssertTrue(logo.exists, "logo를 찾을 수 없습니다.")
+        let firstActionButton = app.images["like"]
+        XCTAssertTrue(firstActionButton.exists, "firstActionButton을 찾을 수 없습니다.")
+        let secondActionButton = app.images["dm"]
+        XCTAssertTrue(secondActionButton.exists, "secondActionButton을 찾을 수 없습니다.")
+    }
+    
     func test_AppView는_feed_search_upload_active_mypage로_이루어져있다() throws {
         let feedTab = app.images["feedOnTab"]
         XCTAssertTrue(feedTab.exists, "feedTap을 찾을 수 없습니다.")
@@ -59,8 +68,6 @@ final class AppViewUITest: XCTestCase {
         XCTAssertTrue(nextView.exists, "다음 뷰가 등장하지 않았습니다.")
         XCTAssertTrue(nextFeedTab.exists, "feedTap이 비활성화 되지 않았습니다.")
         XCTAssertTrue(nextSearchTab.exists, "searchTap이 활성화되지 않았습니다.")
-        
-        
     }
 
 }
