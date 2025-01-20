@@ -12,37 +12,43 @@ struct AppView: View {
     @State var selection : Tab = .feed
     
     var body: some View {
-        NavigationView {
+
+        VStack(spacing: 0) {
             
-            VStack {
-                
-                AppBar()
-                
-                VStack(spacing: 0) {
-                    switch selection {
-                    case .feed:
-                        FeedView()
-                    case .search:
-                        Text("Search View")
-                            .padding()
-                    case .upload:
-                        Text("Upload View")
-                            .padding()
-                    case .active:
-                        Text("Active View")
-                            .padding()
-                    case .mypage:
-                        Text("Mypage View")
-                            .padding()
-                    }
-                    
-                    Spacer()
-                    
-                    BottomNavBarView(selectedTab: $selection)
-                    
-                }
-            }
+            tabViews()
+            
+            Spacer()
+            
+            bottomTabBar()
+            
         }
+    }
+    
+    @ViewBuilder
+    func tabViews() -> some View {
+        switch selection {
+        case .feed:
+            FeedView()
+        case .search:
+            Text("Search View")
+                .padding()
+        case .upload:
+            Text("Upload View")
+                .padding()
+        case .active:
+            Text("Active View")
+                .padding()
+        case .mypage:
+            Text("Mypage View")
+                .padding()
+        }
+
+    }
+    
+    @ViewBuilder
+    func bottomTabBar() -> some View {
+        BottomNavBarView(selectedTab: $selection)
+            .frame(height: 50)
     }
 }
 
