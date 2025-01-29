@@ -3,18 +3,27 @@ import SwiftUI
 struct FeedView : View {
     @State private var isHidden : Bool = false
     var topEdge : CGFloat = 40
-    var body : some View {
+    var body: some View {
         NavigationView {
-            FeedContentView(isHidden: $isHidden)
-                .navigationBarTitleDisplayMode(.inline)
-                .navigationBarItems(leading: logo(), trailing: trailItems())
-                .toolbarBackgroundVisibility(.visible, for: .navigationBar)
-                .toolbarBackground(Color.white, for: .navigationBar)
-                .navigationBarHidden(isHidden)
-                .padding(.top, 1)
+            ZStack(alignment: .top) {
+                VStack {
+                    Spacer()
+                        .frame(height: 1)
+                    FeedContentView(isHidden: $isHidden)
+                }
+                
+                HStack {
+                    logo()
+                    Spacer()
+                    trailItems()
+                }
+                .padding(.horizontal, 16)
+                .background(Color.white)
+                .offset(y: isHidden ? -topEdge : 0)
+            }
         }
-        
     }
+
     
     
     @ViewBuilder

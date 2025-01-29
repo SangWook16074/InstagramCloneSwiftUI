@@ -21,8 +21,8 @@ struct FeedContentView: View {
                 oldPhase == .interacting,
                 newPhase != .animating,
                 context.geometry.contentOffset.y > lastOffset
-            {
-                withAnimation(.linear(duration: 1)) {
+            {   
+                withAnimation(.linear(duration: 0.1)) {
                     isHidden = true
                 }
             }
@@ -31,7 +31,7 @@ struct FeedContentView: View {
                 newPhase != .animating,
                 context.geometry.contentOffset.y < lastOffset
             {
-                withAnimation(.linear(duration: 1)) {
+                withAnimation(.linear(duration: 0.1)) {
                     isHidden = false
                 }
             }
