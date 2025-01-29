@@ -45,7 +45,6 @@ struct AppView: View {
 
     }
     
-    @ViewBuilder
     func bottomTabBar() -> some View {
         BottomNavBarView(selectedTab: $selection)
             .frame(height: 50)

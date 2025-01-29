@@ -25,8 +25,6 @@ struct FeedView : View {
     }
 
     
-    
-    @ViewBuilder
     private func logo() ->some View {
         Image(.logo)
             .resizable()
@@ -34,10 +32,9 @@ struct FeedView : View {
             .padding(.horizontal, 8.0)
             .opacity(isHidden ? 0 : 1)
             .accessibilityIdentifier("logo")
-            
     }
     
-    @ViewBuilder
+    
     private func trailItems() -> some View {
         HStack {
                 Image(.likeOffIcon)

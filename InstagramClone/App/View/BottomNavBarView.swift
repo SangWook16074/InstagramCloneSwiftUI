@@ -32,9 +32,13 @@ struct BottomNavBarView : View {
             
             GeometryReader { geo in
                 let path = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnnnObTCNg1QJoEd9Krwl3kSUnPYTZrxb5Ig&s"
-                CircleImageView(imageUrl: path, type: (selectedTab == .mypage) ? .bottomNavOn : .bottomNavOff)
+                CircleImageView(imageUrl: path, type: .bottomNav)
                     .onTapGesture {
                         selectedTab = .mypage
+                    }
+                    .padding(2)
+                    .overlay {
+                        Circle().stroke(.black, lineWidth: selectedTab == .mypage ? 1 : 0)
                     }
                     .frame(width: geo.size.width, height: geo.size.height)
             }
@@ -45,5 +49,5 @@ struct BottomNavBarView : View {
 }
 
 #Preview {
-    BottomNavBarView(selectedTab: .constant(.feed))
+    BottomNavBarView(selectedTab: .constant(.mypage))
 }

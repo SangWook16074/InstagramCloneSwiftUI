@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B100E7F2D4A1CF10062CB76 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B100E7E2D4A1CED0062CB76 /* FeedItem.swift */; };
 		5B582F5A2D3A326700F6CE33 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B582F592D3A326700F6CE33 /* CircleImageView.swift */; };
 		5B582F5C2D3A35D500F6CE33 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B582F5B2D3A35D200F6CE33 /* ImageView.swift */; };
 		5B582F662D3AA22B00F6CE33 /* BottomNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B582F652D3AA21B00F6CE33 /* BottomNavBarView.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B100E7E2D4A1CED0062CB76 /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 		5B582F592D3A326700F6CE33 /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		5B582F5B2D3A35D200F6CE33 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		5B582F652D3AA21B00F6CE33 /* BottomNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNavBarView.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 		5B72AD4C2D3E4FC70026524C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5B100E7E2D4A1CED0062CB76 /* FeedItem.swift */,
 				5B72AD4E2D3E98BF0026524C /* FeedContentView.swift */,
 				5B72AD4A2D3E4BA60026524C /* AppBar.swift */,
 				5B72AD482D3E478A0026524C /* FeedView.swift */,
@@ -273,6 +276,7 @@
 				5B72AD4F2D3E98EF0026524C /* FeedContentView.swift in Sources */,
 				5B72AD4B2D3E4BB00026524C /* AppBar.swift in Sources */,
 				5B582F5A2D3A326700F6CE33 /* CircleImageView.swift in Sources */,
+				5B100E7F2D4A1CF10062CB76 /* FeedItem.swift in Sources */,
 				5B5CCF902D37AF3C00BA75C6 /* AppView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,13 +12,7 @@ struct CircleImageView: View {
     let type : CircleImageType
     var body: some View {
         switch type {
-            case .bottomNavOn:
-                bottomNavImage
-                .padding(2)
-                .overlay {
-                    Circle().stroke(.black, lineWidth: 1)
-                }
-            case .bottomNavOff:
+            case .bottomNav:
                 bottomNavImage
             default:
                 basicCircleImage
@@ -38,11 +32,10 @@ struct CircleImageView: View {
 }
 
 enum CircleImageType {
-    case bottomNavOn
-    case bottomNavOff
+    case bottomNav
     case profile
 }
 
 #Preview {
-    CircleImageView(imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnnnObTCNg1QJoEd9Krwl3kSUnPYTZrxb5Ig&s", type: .bottomNavOn)
+    CircleImageView(imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnnnObTCNg1QJoEd9Krwl3kSUnPYTZrxb5Ig&s", type: .bottomNav)
 }
