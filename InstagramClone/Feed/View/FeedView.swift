@@ -2,15 +2,43 @@ import SwiftUI
 
 struct FeedView : View {
     @State private var isHidden : Bool = false
+    @State var lastOffset: CGFloat = 0
     var topEdge : CGFloat = 40
     var body: some View {
         NavigationView {
             ZStack(alignment: .top) {
-                VStack {
+                ScrollView {
                     Spacer()
                         .frame(height: 1)
-                    FeedContentView(isHidden: $isHidden)
+                    
+                    StoryView()
+                    
+                    FeedContentView()
                 }
+                .onScrollPhaseChange { oldPhase, newPhase, context in
+                    if newPhase == .interacting {
+                        lastOffset = context.geometry.contentOffset.y
+                    }
+                    if
+                        oldPhase == .interacting,
+                        newPhase != .animating,
+                        context.geometry.contentOffset.y > lastOffset
+                    {
+                        withAnimation(.linear(duration: 0.1)) {
+                            isHidden = true
+                        }
+                    }
+                    else if
+                        oldPhase == .interacting,
+                        newPhase != .animating,
+                        context.geometry.contentOffset.y < lastOffset
+                    {
+                        withAnimation(.linear(duration: 0.1)) {
+                            isHidden = false
+                        }
+                    }
+                }
+                .safeAreaPadding(.top, isHidden ? 0 : topEdge)
                 
                 HStack {
                     logo()

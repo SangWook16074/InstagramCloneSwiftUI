@@ -19,6 +19,7 @@
 		5B72AD492D3E47920026524C /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B72AD482D3E478A0026524C /* FeedView.swift */; };
 		5B72AD4B2D3E4BB00026524C /* AppBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B72AD4A2D3E4BA60026524C /* AppBar.swift */; };
 		5B72AD4F2D3E98EF0026524C /* FeedContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B72AD4E2D3E98BF0026524C /* FeedContentView.swift */; };
+		5B82B6202D4A26B500B8F867 /* StoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B82B61F2D4A26B100B8F867 /* StoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		5B72AD482D3E478A0026524C /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		5B72AD4A2D3E4BA60026524C /* AppBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBar.swift; sourceTree = "<group>"; };
 		5B72AD4E2D3E98BF0026524C /* FeedContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedContentView.swift; sourceTree = "<group>"; };
+		5B82B61F2D4A26B100B8F867 /* StoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
 		5BF0EAED2D393BF900DB3F3A /* InstagramCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -155,6 +157,7 @@
 		5B72AD4C2D3E4FC70026524C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5B82B61F2D4A26B100B8F867 /* StoryView.swift */,
 				5B100E7E2D4A1CED0062CB76 /* FeedItem.swift */,
 				5B72AD4E2D3E98BF0026524C /* FeedContentView.swift */,
 				5B72AD4A2D3E4BA60026524C /* AppBar.swift */,
@@ -268,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B82B6202D4A26B500B8F867 /* StoryView.swift in Sources */,
 				5B72AD492D3E47920026524C /* FeedView.swift in Sources */,
 				5B582F662D3AA22B00F6CE33 /* BottomNavBarView.swift in Sources */,
 				5B582F5C2D3A35D500F6CE33 /* ImageView.swift in Sources */,
